@@ -1,0 +1,171 @@
+:root[data-theme="light"] {
+    --bg-gradient-1: #1e3c72;
+    --bg-gradient-2: #2a5298;
+    --text-color: white;
+    --button-bg: white;
+    --button-text: #1e3c72;
+    --container-bg: rgba(255, 255, 255, 0.1);
+    --quote-bg: rgba(255, 255, 255, 0.05);
+    --textarea-bg: rgba(255, 255, 255, 0.1);
+    --textarea-text: white;
+}
+
+:root[data-theme="dark"] {
+    --bg-gradient-1: #0f2027;
+    --bg-gradient-2: #203a43;
+    --text-color: #e0e0e0;
+    --button-bg: #2d3436;
+    --button-text: #dfe6e9;
+    --container-bg: rgba(0, 0, 0, 0.2);
+    --quote-bg: rgba(0, 0, 0, 0.1);
+    --textarea-bg: rgba(0, 0, 0, 0.2);
+    --textarea-text: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    color: var(--text-color);
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: var(--container-bg);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.task-container {
+    margin-bottom: 1.5rem;
+}
+
+#taskNote {
+    width: 100%;
+    padding: 1rem;
+    background: var(--textarea-bg);
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    color: var(--textarea-text);
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 60px;
+    transition: all 0.3s ease;
+}
+
+#taskNote:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--text-color);
+}
+
+#taskNote::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.presets {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.preset-btn {
+    padding: 0.5rem 1rem;
+    background: var(--quote-bg);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preset-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-gradient-1);
+}
+
+#timer {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: var(--button-bg);
+    color: var(--button-text);
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.quote-container {
+    padding: 1.5rem;
+    background: var(--quote-bg);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+#quote {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+}

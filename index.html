@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-controls">
+            <button id="themeToggle" class="icon-button">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="task-container">
+            <textarea id="taskNote" placeholder="What are you working on?" rows="2"></textarea>
+        </div>
+        <div class="timer-container">
+            <div id="timer">00:00:00</div>
+            <div class="presets">
+                <button class="preset-btn" data-time="300">5min</button>
+                <button class="preset-btn" data-time="600">10min</button>
+                <button class="preset-btn" data-time="1500">25min</button>
+                <button class="preset-btn" data-time="3000">50min</button>
+            </div>
+            <div class="controls">
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <div class="quote-container">
+            <p id="quote"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
